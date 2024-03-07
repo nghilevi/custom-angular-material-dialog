@@ -1,0 +1,7 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    div[mat-dialog-close] {
+        padding: 20px 24px 9px;
+    }
+}

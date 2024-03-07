@@ -1,0 +1,13 @@
+<header>
+  <h1 mat-dialog-title color="primary">{{ data.title || 'Dialog title' }} </h1>
+  <div mat-button mat-dialog-close>X</div>
+</header>
+
+<div mat-dialog-content>
+  <ng-content></ng-content>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close color="accent">Cancel</button>
+  <button mat-raised-button color="primary">Save</button>
+</div>
