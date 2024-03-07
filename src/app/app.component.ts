@@ -8,15 +8,26 @@ import { DialogComponent } from '../lib/components/dialog/dialog.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private dialog: MatDialog) {}
 
+  isDarkTheme: boolean = false;
+
+  constructor(private dialog: MatDialog) {}
+  
   ngOnInit() {
     this.openDialog();
   }
 
   openDialog() {
     this.dialog.open(DialogComponent, {
+      width: '400px',
       data: { title: 'Nokia Dialog title' },
     });
   }
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+    const theme = this.isDarkTheme ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+
 }

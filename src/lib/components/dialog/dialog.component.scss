@@ -1,7 +1,12 @@
-header {
+
+mat-card-header {
     display: flex;
     justify-content: space-between;
     div[mat-dialog-close] {
-        padding: 20px 24px 9px;
+        padding: 5px 10px 9px;
     }
+}
+
+mat-card-content {
+    min-height: 150px;
 }

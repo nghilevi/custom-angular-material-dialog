@@ -1,13 +1,15 @@
-<header>
-  <h1 mat-dialog-title color="primary">{{ data.title || 'Dialog title' }} </h1>
-  <div mat-button mat-dialog-close>X</div>
-</header>
+<mat-card color="primary">
+  <mat-card-header>
+    <mat-card-title>{{ data.title || 'Dialog title' }}</mat-card-title>
+    <div mat-button mat-dialog-close>X</div>
+  </mat-card-header>
 
-<div mat-dialog-content>
-  <ng-content></ng-content>
-</div>
+  <mat-card-content mat-dialog-content>
+    <ng-content></ng-content>
+  </mat-card-content>
 
-<div mat-dialog-actions align="end">
-  <button mat-raised-button mat-dialog-close color="accent">Cancel</button>
-  <button mat-raised-button color="primary">Save</button>
-</div>
+  <mat-card-footer mat-dialog-actions align="end">
+    <button mat-raised-button mat-dialog-close color="accent">Cancel</button>
+    <button mat-raised-button color="primary">Save</button>
+  </mat-card-footer>  
+</mat-card>
