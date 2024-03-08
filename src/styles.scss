@@ -2,9 +2,7 @@
 
 @use '@angular/material' as mat; // Custom Theming for Angular Material
 @include mat.core(); // Angular Material common styles. only include once
-@import './lib/styles/palette';
-@import './lib/styles/colors';
-@import './lib/styles/themes';
+@import './libs/nokia-ui/styles/';
 
 /* global styles */
 html, body { height: 100%; }

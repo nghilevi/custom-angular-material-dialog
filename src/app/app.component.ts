@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogComponent } from '../lib/components/dialog/dialog.component';
+import { DialogComponent } from '../libs/nokia-ui/components/dialog/dialog.component';
+import { ThemeService } from 'src/libs/nokia-ui/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent implements OnInit {
 
   isDarkTheme: boolean = false;
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, private themeService: ThemeService) {}
   
   ngOnInit() {
     this.openDialog();
@@ -27,6 +28,7 @@ export class AppComponent implements OnInit {
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme;
     const theme = this.isDarkTheme ? 'dark' : 'light';
+    this.themeService.setTheme(theme);
     document.documentElement.setAttribute('data-theme', theme);
   }
 

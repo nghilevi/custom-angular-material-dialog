@@ -31,7 +31,7 @@ $nokia-theme-warm: mat.define-light-theme((
 
 [data-theme="dark"] {
   --background-color: black;
+  --element-background-color: #4E5560;
   --text-color: white;
   @include mat.all-component-themes($nokia-theme-dark);
-  @include mat.card-theme($nokia-theme-warm);
 }

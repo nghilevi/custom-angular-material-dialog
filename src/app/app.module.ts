@@ -5,23 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatDialogModule } from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import { DialogComponent } from '../lib/components/dialog/dialog.component';
+import { NokiaUIModule } from 'src/libs/nokia-ui/ui.module';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule,
+    NokiaUIModule,
     MatButtonModule,
-    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
