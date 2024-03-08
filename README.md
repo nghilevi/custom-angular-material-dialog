@@ -2,8 +2,7 @@
 
 This example project demonstrates the utilization and customization of an Angular Material component, showcasing its theming capability.
 
-[DEMO](https://nghilevi.github.io/custom-angular-material-dialog
-/)
+[DEMO](https://nghilevi.github.io/custom-angular-material-dialog/)
 
 ## Screenshots
 
